@@ -1,0 +1,27 @@
+name: "github-action-gwent-cards"
+description: "A GitHub action that pulls cards from Gwent.one's API and submits a pull request with the changes."
+inputs:
+  github-token:
+    description: "GitHub token used to submit a pull request."
+    required: true
+  api-key:
+    description: "API key used to fetch data from Gwent.one, see: https://gwent.one/api/cardlist"
+    required: true
+  api-language:
+    description: "Language parameter passed to Gwent.one's API, see https://gwent.one/api/cardlist"
+    required: false
+    default: undefined
+  api-version:
+    description: "Version parameter passed to Gwent.one's API, see: https://gwent.one/api/cardlist"
+    required: false
+    default: undefined
+  output-path:
+    description: "Path to the file to be generated, e.g src/data/cards.json"
+    required: true
+  base-branch:
+    description: "The branch the pull requests must be based on."
+    required: false
+    default: "master"
+runs:
+  using: "node12"
+  main: "build/index.js"
