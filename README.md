@@ -16,7 +16,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: zhouzi/github-action-gwent-cards@1.0.0
+      - uses: zhouzi/github-action-gwent-cards@0.0.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           api-key: ${{secrets.GWENT_ONE_API_KEY}}
