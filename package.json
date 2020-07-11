@@ -1,28 +1,8 @@
 {
-  "name": "github-action-gwent-cards",
-  "version": "0.0.0",
-  "description": "A GitHub action that pulls cards from Gwent.one's API and submits a pull request with the changes.",
-  "main": "build/index.js",
+  "private": true,
   "scripts": {
-    "build": "ncc build ./src/index.ts -o build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build ./src/index.ts -o build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zhouzi/github-action-gwent-cards.git"
-  },
-  "keywords": [
-    "action",
-    "gwent.one",
-    "cards",
-    "gwent"
-  ],
-  "author": "Gabin Aureche <hello@gabinaureche.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Zhouzi/github-action-gwent-cards/issues"
-  },
-  "homepage": "https://github.com/Zhouzi/github-action-gwent-cards#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0",
